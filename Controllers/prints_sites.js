@@ -15,6 +15,7 @@ module.exports = function(app)
 					c=count;
 			});
 			var query = { username: req.query.username };
+			
 			db.collection("user_sites_details").find({}).toArray(function(err,resu)
 				{
 					if(err) throw err;
