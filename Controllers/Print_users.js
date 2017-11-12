@@ -14,6 +14,7 @@ module.exports = function(app){
 				if(err) throw err;
 					c=count;
 			});
+
 			db.collection("main_login").find({}).toArray(function(err,resu)
 				{
 					if(err) throw err;
@@ -27,9 +28,10 @@ module.exports = function(app){
 					var a;
 					a=view_screen+'</table></div></body></html>';
 					res.send(a);
+					db.close();
 				});
 
-			db.close();
+			
 		});
 		
 	});

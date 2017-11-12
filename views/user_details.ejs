@@ -2,10 +2,13 @@
 	<head>
 	<title>User_details</title>
 	</head>
+	<body>
 	<h2>USER DEATILS</h2><br>
 	<form method="get" action="http://localhost:3000/prints_sites">
 		<table>
 		<tr>PRINT SITES</tr>
+		UserName:
+		<tr><input type="text" id="UN" name="UN"/></tr>
 		<tr><td><input type="submit" /></td></tr>
 		</table>
 	</form>
@@ -34,4 +37,8 @@
 		<tr><td><input type="submit" value="FACEBOOK LOGIN"/></td></tr>
 		</table>
 	</form>
+	<script type="text/javascript">	
+	document.getElementById('UN').value = req.query.username;
+	</script>
+	</body>
 </html>

@@ -25,3 +25,6 @@ client.messages.create({
     }
 });
 
+module.exports = {a: client , b : OTP};
+
+
