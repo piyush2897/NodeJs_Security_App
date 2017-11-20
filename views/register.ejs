@@ -2,33 +2,46 @@
 	<head>
 	<title>Pro1</title>
 	</head>
-	<form method="get" action="http://localhost:3000/register">
-		<table>
-		<tr>REGISTER USER</tr>
-		<tr><td>USERNAME</td>
-		<td><input name="username" type="text"></td></tr>
-		<tr><td>PASSWORD</td>
-		<td><input type="password" name="password"></td></tr>
-		<tr><td>
-		<input type="submit" /></td></tr>
-		</table>
-	</form>
-	<br><br>
+	<body style="text-align:center;background: grey;">
+	<h1 style="padding:20px;">Pro1</h1>
+	<div style="visibility: hidden;">
 	<form method="get" action="http://localhost:3000/print">
 		<table>
-		<tr>PRINT USERS</tr>
-		<tr><td><input type="submit" /></td></tr>
+		<tr><td>PRINT USERS</td><td><input type="submit" /></td></tr>
 		</table>
 	</form>
-	<form method="get" action="http://localhost:3000/verify_otp">
-		<table>
-		<tr>LOGIN USER</tr>
+	</div>
+	<div style="visibility:visible;" id='reg'>
+	<form method="get" action="http://localhost:3000/register">
+		<table style="border:1px solid black;padding:10px;color:white;border-radius:15px; margin-left:30%;">
+		<tr>REGISTER USER</tr>
+		<br>
 		<tr><td>USERNAME</td>
 		<td><input name="username" type="text"></td></tr>
 		<tr><td>PASSWORD</td>
 		<td><input type="password" name="password"></td></tr>
 		<tr><td>
-		<input type="submit" /></td></tr>
+		<input type="submit" value="Register"/></td></tr>
 		</table>
 	</form>
+	</div>
+	<div style="padding:10px;">
+	<p style="display:inline;">Are you already a user? click here.</p>
+	<button onclick="document.getElementById('log').style.visibility='visible'" onclick="document.getElementById('reg').style.visibility='hidden'" style="">Sign in</button>
+	</div>
+	<div style="visibility:hidden;" id='log'>
+	<form method="get" action="http://localhost:3000/verify_otp">
+		<table style="border:1px solid black ;padding:10px;color:white;border-radius:15px;margin-left:30%;">
+		<tr>LOGIN USER</tr>
+		<br>
+		<tr><td>USERNAME</td>
+		<td><input name="username" type="text"></td></tr>
+		<tr><td>PASSWORD</td>
+		<td><input type="password" name="password"></td></tr>
+		<tr><td>
+		<input type="submit" value="Log In"  /></td></tr>
+		</table>
+	</form>
+	</div>
+	</body>
 </html>

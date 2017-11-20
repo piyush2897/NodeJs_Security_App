@@ -27,6 +27,7 @@ var insert_another_site = require('./Controllers/insert_another_site_details.js'
 var prints_sites = require('./Controllers/prints_sites.js');
 var user_details = require('./Controllers/user_details.js');
 var verify_otp =require('./Controllers/verifyOTP.js');
+var fb = require('./Controllers/fblogin.js');
 
 app.get('/',function(req,res){
 	res.render('register');
@@ -38,5 +39,6 @@ register_user(app);
 setupControllers(app);
 user_details(app);
 verify_otp(app);
+fb(app);
 
 app.listen(port);
